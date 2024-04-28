@@ -1,7 +1,8 @@
 const express=require('express');
 const app=express();
 const router =require('./route.js');
-
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 app.use(router);
 
 app.listen(3000, ()=>
