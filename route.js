@@ -1,5 +1,4 @@
 const router=require('express').Router();
-const { Console } = require('console');
 const e = require('express');
 const mongoose=require('mongoose');
 
