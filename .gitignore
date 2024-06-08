@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 node_modules
 
 .env
+=======
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore .env file which might contain sensitive information
+.env
+>>>>>>> 200ab681ee1f7df98c99fe9587cf11ebffb71665
