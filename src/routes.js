@@ -26,7 +26,7 @@ router.put('/student/:id',async(req,res)=>{
         phone: parseInt(req.body.phone, 10)
     }
     await Student.updateOne({roll:req.params.id},studentObj)
-    res.send(`New student ${req.body.name} Added Successfully!`);
+    res.send(`Updated student ${req.params.id} `);
 });
 
 router.post('/student',async(req,res)=>{
