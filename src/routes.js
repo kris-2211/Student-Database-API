@@ -1,5 +1,6 @@
-const router=require('express').Router();
-import {Student} from './Models/StudentModel'
+import express from 'express'
+const router= express.Router();
+import {Student} from './Models/StudentModel.js'
 
 
 
@@ -44,7 +45,7 @@ router.post('/student',async(req,res)=>{
 
 
 
-router.delete('/delete/:id',async (req,res)=>{
+router.delete('/student/:id',async (req,res)=>{
     const id=req.params.id;
     await Student.deleteOne({roll:id});
     try{
@@ -56,8 +57,8 @@ router.delete('/delete/:id',async (req,res)=>{
 });
 
 
-router.all('*',(req,res)=>{
-    res.sendStatus(404);
+router.all('/',(req,res)=>{
+    res.send('home page');
 })
 
 export default router;

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { BRANCH_ENUM,YEAR_ENUM } from "../Constants";
+import { branch_enum,year_enum} from "../Constants.js";
 const StudentSchema = new mongoose.Schema({
     roll:{
         type:String,
@@ -14,12 +14,12 @@ const StudentSchema = new mongoose.Schema({
     age:Number,
     branch:{
         type:String,
-        enum:BRANCH_ENUM,
+        enum:branch_enum,
         required:true
     },
     year:{
         type:Number,
-        enum:YEAR_ENUM,
+        enum:year_enum,
         required:true
     },
     email:String,
